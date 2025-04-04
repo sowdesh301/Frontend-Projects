@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: serif;
+}
+body{
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+h2{
+    font-size: 3.56rem;
+    color: #333;
+    -webkit-text-stroke: 0.1vw deeppink;
+    text-transform: uppercase;
+    position: relative;
+}
+h2::before{
+    content:attr(data-text);
+    position: absolute;
+    width: 0;
+    height:100;
+    color:deeppink;
+    left:0;
+    top:0;
+    -webkit-text-stroke: 0vw #333;
+    overflow: hidden;
+    animation: ani 6s linear infinite;
+    border-right: 3px solid deeppink;
+
+}
+@keyframes ani{
+    0%,10%,100%{
+        width: 0;
+    }
+    50%, 70%{
+        width: 100%;
+        
+    }
+
+}
